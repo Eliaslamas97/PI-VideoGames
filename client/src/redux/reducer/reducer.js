@@ -3,13 +3,14 @@ import {
     GET_VIDEOGAMES,
     SEARCH_BY_NAME,
     GET_VIDEOGAME_DETAIL,
-    
+    GET_GENRES,
   } from "../actions/actions";
   
   const initialState = {
     videogames: [],
     videogameDetail: [],
     videogamesToShow: [],
+    genres: [],
   };
   
   function rootReducer(state = initialState, action, payload) {
@@ -19,6 +20,12 @@ import {
           ...state,
           videogames: action.payload,
           videogamesToShow: action.payload,         
+        };
+      
+        case GET_GENRES:
+        return {
+          ...state,
+          genres: action.payload,       
         };
   
         

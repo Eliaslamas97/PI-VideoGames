@@ -21,20 +21,18 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
     },
     rating: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
     },
     platforms: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
     createDb: {
       type: DataTypes.BOOLEAN,
-      allowNull: false,
       defaultValue: true,
     },
     backgroundImage: {
       type: DataTypes.STRING,
-    }
+    },
   }, {
     timestamps: false
   });
