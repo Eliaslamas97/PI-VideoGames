@@ -27,15 +27,17 @@ export function searchByName(name) {
 //...............DETAIL GAME....................
 export function getVideogameDetail(id){
     return function (dispatch) {
-        return fetch(`http://localhost:3002/videogame/${id}`)
-        .then(response => response.json())
-        .then(json => {
-            dispatch({type:"GET_VIDEOGAME_DETAIL", payload:json})
-        });
+        return axios.get(`http://localhost:3002/videogame/${id}`)
+        .then((response) => {
+            dispatch({
+                type:'GET_VIDEOGAME_DETAIL',
+                payload: response.data,
+            })
+        })      
     };
 }
 //.................... POST CREATE GAME.................
-export const postGame = (payload) => {
+export function postGame(payload){
     return dispatch => {
         try {
                 axios.post(`http://localhost:3002/videogames/create`, payload)

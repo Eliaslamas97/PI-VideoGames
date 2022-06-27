@@ -18,13 +18,14 @@ module.exports = (sequelize) => {
       allowNull: false,
     },
     releaseDate: {
-      type: DataTypes.STRING,
+      type: DataTypes.DATEONLY,
+      defaultValue: DataTypes.NOW,
     },
     rating: {
       type: DataTypes.STRING,
     },
     platforms: {
-      type: DataTypes.STRING,
+      type: DataTypes.ARRAY(DataTypes.STRING),
     },
     createDb: {
       type: DataTypes.BOOLEAN,
