@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
+.container {
+    background-color: rgba(100, 175, 152, 0.068);
+    display:flex;
+    padding: 1px;
+    /* border: 1px solid rgba(240, 248, 255, 0.226); */
+    width: 1000px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+.img {
+    border-radius: 10px;
+    border: 1px solid rgba(24, 25, 26, 0);
+    display: flex;
+}
+
+
+.name {
+    background-color: rgba(100, 175, 152, 0);
+    backdrop-filter: blur(50px);
+    display: flex;
+    font-family: "Quantico";
+    font-size: 27px;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgba(240, 248, 255, 0.24);
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 0 auto;
+    width:auto;
+}
+
+.genres {
+    background-color: rgba(100, 175, 152, 0);
+    backdrop-filter: blur(50px);
+    display: flex;
+    font-family: "Quantico";
+    font-size: 19px;
+    margin-left: 30px;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgba(240, 248, 255, 0.24);
+    align-items: center;
+    justify-content:space-evenly;
+    height: 44px;
+    width:550px;
+    margin: 0 auto;
+    border-radius: 10px;
+
+}
+
+.platforms {
+    background-color: rgba(100, 175, 152, 0);
+    backdrop-filter: blur(50px);
+    display: flex;
+    font-family: "Quantico";
+    font-size: 17px;
+    margin-left: 30px;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgba(240, 248, 255, 0.24);
+    align-items: center;
+    justify-content:space-evenly;
+    height: 44px;
+    width: auto;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.date {
+    background-color: rgba(100, 175, 152, 0);
+    backdrop-filter: blur(50px);
+    display: flex;
+    font-family: "Quantico";
+    font-size: 19px;
+    margin-left: 30px;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgba(240, 248, 255, 0.24);
+    align-items: center;
+    justify-content: space-evenly;
+    height: 44px;   
+    width: auto;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.rating {
+    background-color: rgba(100, 175, 152, 0);
+    backdrop-filter: blur(50px);
+    display: flex;
+    font-family: "Quantico";
+    font-size: 19px;
+    margin-left: 30px;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgba(240, 248, 255, 0.24);
+    align-items: center;
+    justify-content: space-evenly;
+    height: 44px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.description {
+    display: flex;
+    font-family: "Quantico";
+    color:aliceblue;
+    border: 1px solid rgba(240, 248, 255, 0.24);
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    width: auto;
+    max-width: 1000px;
+    background-color: rgba(100, 175, 152, 0);
+    backdrop-filter: blur(50px);
+    padding: 1px;
+}

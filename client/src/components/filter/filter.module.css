@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+.filterContainer {
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerForms {
+    width: 100%;
+
+    margin: 0 20px;
+    padding: 25px 0;
+    margin-top: 80px ;
+    background-color: rgba(100, 175, 152, 0.068);
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.containerOrderSelect {
+    width:25%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.containerOrderSelect label {
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    font-family:  "Press Start 2p";
+}
+
+.containerOrderSelect select {
+    width: fit-content;
+    height: 39px;
+
+    padding-left: 5px;
+    border-radius: 5px;
+    border: 2px solid rgba(170, 170, 170, 0);
+    color: #000000;
+    background-color: rgba(100, 175, 152, 0.308); 
+}
+
+.containerFilterSelect {
+    width:25%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.containerFilterSelect label {
+    font-size: 13px;
+    color: white;
+    font-weight: bold;
+    font-family:  "Press Start 2p";
+}
+
+.containerFilterSelect select {
+    width: fit-content;
+    height: 39px;
+
+    padding-left: 5px;
+    border-radius: 5px;
+    border: 2px solid rgba(170, 170, 170, 0);
+    color: #000000;
+    background-color: rgba(100, 175, 152, 0.308); 
+}

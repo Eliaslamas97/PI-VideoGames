@@ -6,6 +6,7 @@ import navBar from "./components/navBar/navBar";
 import videogameDetail from "./components/videogameDetails/videogameDetail";
 import createVideogames from "./components/createVideogames/createVideogames";
 import home from "./components/home/home";
+import filters from './components/filter/filter';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
     <>
     <Route path="/videogames" component={navBar} />
     <Route path="/videogame" component={navBar} />
+    <Route exact path="/videogames" component={filters}/>
     <Route exact path="/videogames" component={home}/>
     <Route exact path="/videogame/:id" component={videogameDetail} />
     <Route exact path="/videogames/create" component={createVideogames} />

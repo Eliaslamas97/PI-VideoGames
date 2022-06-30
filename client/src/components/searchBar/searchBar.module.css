@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+.inputSearch{
+    background-color: rgba(100, 175, 152, 0.308);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border: 2px solid rgba(170, 170, 170, 0);
+    padding-bottom: 5px;
+    padding-top: 8px;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+::placeholder { 
+    color: 0 0 1px rgba(255,255,255,1) , 0 0 2px rgb(224, 201, 201) , 0 0 3px rgb(185, 182, 182) , 0 0 4px #30dddd , 0 0 7px #00ffff , 0 0 8px #00ffff , 0 0 10px #00ffff;
+    font-family: "Press Start 2p";
+    font-weight:lighter;
+    font-size: 10px;
+}
+
+
+.bottonSearch{
+    position:relative;
+    background-color: rgba(100, 175, 152, 0.308);
+    border: 1px solid rgba(12, 12, 12, 0);   
+    border-radius: 5px;
+    padding: 8px;
+    padding-inline: 10px;
+    margin-left:6px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: "Press Start 2p"
+}
+
+.bottonSearch span{
+    font-size: 15px;
+    ;
+}
+
+.bottonSearch:hover{
+    text-shadow: 0 0 1px rgba(255,255,255,1) , 0 0 2px rgba(255,255,255,1) , 0 0 3px rgba(255,255,255,1) , 0 0 4px #00ffff , 0 0 7px #00ffff , 0 0 8px #00ffff , 0 0 10px #00ffff ;
+}
+
+/* .buscar{
+    position: absolute;
+    padding: 5px;
+}
+
+.buscar input {
+width: 240px;
+height: 40px;
+padding: 0 20px;
+font-size: 18px;
+color: #000;   
+outline: none;
+border: 1px solid silver;
+border-radius: 30px; 
+transition: all 0.6s ease;
+}
+
+.btn {
+    position: absolute;
+    top: 0;
+    right:0;
+    background: #440080;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.buscar:hover input {
+ width: 240px;
+}
+
+.buscar input:focus{
+ width: 240px;
+} */

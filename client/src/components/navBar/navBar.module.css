@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+.nav {
+    display:flex;
+    /* width: 96%;
+    height: 50%; */
+    padding: 30px;
+    /* border: 1px solid rgb(51, 51, 51); */
+    background-color: rgba(100, 175, 152, 0.068);
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    margin-top: 0px;
+}
+
+.videogame {
+    font-family: "Press Start 2p";
+    /* color:rgba(210, 218, 224, 0.89);
+    /* mix-blend-mode:difference; */
+    /* background-color: rgb(0, 0, 0);  */
+    font-size: 30px;
+    text-shadow: 0 0 1px rgba(255,255,255,1) , 0 0 2px rgba(255,255,255,1) , 0 0 3px rgba(255,255,255,1) , 0 0 4px #00ffff , 0 0 7px #00ffff , 0 0 8px #00ffff , 0 0 10px #00ffff ;
+}
+
+.home{
+    display: flex;
+    font-family: "Press Start 2p";
+    text-shadow: 0 0 1px rgba(255,255,255,1) , 0 0 2px rgba(255,255,255,1) , 0 0 3px rgba(255,255,255,1) , 0 0 4px #00ffff , 0 0 7px #00ffff , 0 0 8px #00ffff , 0 0 10px #00ffff ;
+
+}
+
+.create {
+    display: flex;
+    font-family: "Press Start 2p";
+    text-shadow: 0 0 1px rgba(255,255,255,1) , 0 0 2px rgba(255,255,255,1) , 0 0 3px rgba(255,255,255,1) , 0 0 4px #00ffff , 0 0 7px #00ffff , 0 0 8px #00ffff , 0 0 10px #00ffff ;
+}

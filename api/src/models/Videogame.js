@@ -18,7 +18,7 @@ module.exports = (sequelize) => {
       allowNull: false,
     },
     releaseDate: {
-      type: DataTypes.DATEONLY,
+      type: DataTypes.STRING,
       defaultValue: DataTypes.NOW,
     },
     rating: {

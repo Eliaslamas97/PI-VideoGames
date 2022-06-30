@@ -95,7 +95,7 @@ router.post("/create", async function (req, res,next) {
     const {
       name,
       description,
-      release_date,
+      releaseDate,
       rating,
       platforms,
       background_image,
@@ -105,7 +105,7 @@ router.post("/create", async function (req, res,next) {
     const videogame = await Videogames.create({
       name,
       description,
-      release_date,
+      releaseDate,
       rating,
       background_image,
       platforms,

@@ -1,0 +1,53 @@
+
+.cards{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 100px;
+    justify-items: center;
+  
+}
+
+.button{
+    display: inline-block;
+    color: rgb(253, 253, 253);
+    text-decoration: none;
+    border: 2px solid #f6f6f8;
+    padding: 5px 10px 5px 10px;
+    background-color: rgba(100, 175, 152, 0.068);
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: "videogamefont";
+}
+
+.paginado{
+    display: flex;
+    justify-self: center;
+    justify-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    padding-bottom: -40px;
+ }
+
+.span{
+    font-family: "videogamefont";
+    font-size: 23px;
+    color:aliceblue; 
+}
+
+.background { 
+    opacity: 0.98;
+    width: 100%; 
+    height: 100%; 
+    position: fixed; 
+    left: 0px; 
+    top: 0px; 
+    z-index: -1;
+ }
+
+.stretch { 
+    width:100%; 
+    height:100%; 
+}
