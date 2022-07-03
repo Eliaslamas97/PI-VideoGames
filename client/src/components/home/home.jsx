@@ -47,11 +47,13 @@ export default function Home(card) {
             <div className={s.background}> 
                 <img src={image} className={s.stretch} alt="" />
             </div>
-            <div className={s.paginado}>
+            <br/>
+            <br/>
+            {/* <div className={s.paginado}>
                 <button className={s.button} onClick={PrevHandler}>Prev</button>
                 <span className={s.span}> {currentPage} </span>
                 <button className={s.button} onClick={NextHandler}>Next</button>
-            </div>
+            </div> */}
         <div  className={s.cards}>
         {filterVideogames()?.map((x) => {
             return (
@@ -65,6 +67,11 @@ export default function Home(card) {
                 />
             )
         })}
+        </div>
+        <div className={s.paginado}>
+                <button className={s.button} onClick={PrevHandler}>Prev</button>
+                <span className={s.span}> {currentPage} </span>
+                <button className={s.button} onClick={NextHandler}>Next</button>
         </div>
     </div>
  )

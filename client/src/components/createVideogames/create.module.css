@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
+.container {   
+        background-color: rgba(100, 175, 152, 0.068);
+        backdrop-filter: blur(5px);
+        display:flex;
+        padding: 1px;
+        width: 1000px;
+        border-radius: 10px;
+        margin: 0 auto;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+}
+
+.title {
+    font-size: 40px;
+    color: rgb(3, 3, 3);
+    text-shadow: 0 0 1px rgba(255,255,255,1) , 0 0 2px rgba(255,255,255,1) , 0 0 3px rgba(255,255,255,1) , 0 0 4px #00ffff , 0 0 7px #00ffff , 0 0 8px #00ffff , 0 0 10px #00ffff ;
+    font-family:"Press Start 2p";
+    padding: 20px 30px;
+    border-radius: 30px;
+}
+
+.input {
+    background-color: rgb(218, 218, 218);
+    backdrop-filter: blur(50px);
+    border: 2px solid rgb(170, 170, 170);
+    padding: 2px 3px;
+    height: 40px;
+    width: 200px;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+    /* margin-left: 390px; */
+}
+
+::placeholder { 
+    color: rgba(0, 0, 0, 0.623);
+    font-family: "Press Start 2p";
+    font-weight:lighter;
+    font-size: 10px;
+}
+
+.description {
+    display: flex;
+    background-color: rgb(218, 218, 218);
+    backdrop-filter: blur(50px);
+    border: 2px solid rgb(170, 170, 170);
+    padding: 20px 30px;
+    color: black;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 270px;
+}
+
+::placeholder { 
+    color: rgba(0, 0, 0, 0.623);
+    font-family: "Press Start 2p";
+    font-weight:lighter;
+    font-size: 10px;
+}
+
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.container3 {
+    display: flex;
+}
+
+.container4 {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.textdate{
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 1px rgba(255,255,255,1) , 0 0 2px rgba(255,255,255,1) , 0 0 3px rgba(255,255,255,1) , 0 0 4px #00ffff , 0 0 7px #00ffff , 0 0 8px #00ffff , 0 0 10px #00ffff ;
+    font-family: "Press Start 2p";
+    font-weight:bold;
+    font-size: 13px;    
+}
+
+.date{
+    display:inline-flex;
+    background-color: rgb(218, 218, 218);
+    backdrop-filter: blur(50px);
+    border: 2px solid rgb(170, 170, 170);
+    padding: 2px 4px;
+    height: 20px;
+    width: 160px;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+    font-family: "Press Start 2p";
+    font-size: 8px;
+    font-weight:lighter;
+}
+
+.rating{
+    display:inline-flex;
+    background-color: rgb(218, 218, 218);
+    backdrop-filter: blur(50px);
+    border: 2px solid rgb(170, 170, 170);
+    padding: 2px 4px;
+    height: 40px;
+    width: 172px;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+    font-family: "Press Start 2p";
+    font-size: 8px;
+    font-weight:lighter;
+}
+
+.genres{
+    display:inline-flex;
+    background-color: rgb(218, 218, 218);
+    backdrop-filter: blur(50px);
+    border: 2px solid rgb(170, 170, 170);
+    padding: 2px 4px;
+    height: 40px;
+    width: 172px;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+    font-family: "Press Start 2p";
+    font-size: 8px;
+    font-weight:lighter;
+}
+
+.spn {
+    background-color: rgb(218, 218, 218);
+    backdrop-filter: blur(50px);
+    border: 2px solid rgb(170, 170, 170);
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+    font-family: "Press Start 2p";
+    font-size: 10px;
+    font-weight:lighter;
+    padding: 5px 6px;
+}
+
+.btn {
+    background-color: rgb(218, 218, 218);
+    border-radius: 10px;
+    border: 1px solid rgba(170, 170, 170, 0);
+    height: 20 px;
+    width: 20px;
+    color: black;
+    text-align: center;
+    font-family: "Press Start 2p";
+    font-weight: lighter;
+    font-size: 10px;
+}
+
+.textp {
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 1px rgba(255,255,255,1) , 0 0 2px rgba(255,255,255,1) , 0 0 3px rgba(255,255,255,1) , 0 0 4px #00ffff , 0 0 7px #00ffff , 0 0 8px #00ffff , 0 0 10px #00ffff ;
+    font-family: "Press Start 2p";
+    font-weight:bold;
+    font-size: 13px;  
+    width: auto;
+    height: auto;
+}
+
+.labelplat {
+    background-color: rgba(100, 175, 152, 0);
+    
+    color:aliceblue;
+    font-family: "quantico";
+    font-weight: bold;
+    border-radius: 5px;
+    width: auto;
+    height: auto;
+}
+
+.iplat{
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+}
+
+
+.box {
+    display:inline-flex;
+    background-color: rgb(218, 218, 218);
+    backdrop-filter: blur(50px);
+    border: 2px solid rgb(170, 170, 170);
+    padding: 2px 4px;
+    height: 40px;
+    width: 172px;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+    font-family: "Press Start 2p";
+    font-size: 8px;
+    font-weight:lighter;
+}
+
+.btn {
+    border-radius: 10px;
+    font-family:"Press Start 2p";
+    border: 2px solid rgb(170, 170, 170);
+    color: black;
+    height: auto;
+    width: auto;
+    padding: 10px;
+}
+
+.btn:hover{
+    animation: pulsate 2s 
+    ease-in-out;
+    cursor: pointer;
+}
+
+@keyframes pulsate {
+    0%{
+        box-shadow: 
+        0 0 25px #5ddcff,
+        0 0 50px #4e00c2;
+    }
+}
+
+
+
+
+/* -------------------------------------------- */

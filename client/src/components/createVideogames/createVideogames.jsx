@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { getGenres, postGame } from "../../redux/actions/actions";
+import s from "./create.module.css"
 
 export default function CreateVideogames () {
     const [errorsValue, setErrorsValue] = useState({})
@@ -61,23 +62,24 @@ export default function CreateVideogames () {
 
     return(
         <>
-        <div>
+        <div className={s.container}>
             <form name="formAct" onSubmit={e => handleSubmit(e)}>
-                <h1>Create Game</h1>
-                <input name="name" autoComplete="off" placeholder="Game name..." onChange={e => HandleGame(e)}/>
+                <h1 className={s.title}>Create Game</h1>
+                <input className={s.input} name="name" autoComplete="off" placeholder="Game name..." onChange={e => HandleGame(e)}/>
                 <p>{errorsValue.name}</p>
-                <div>
-                    <textarea name="description" autoComplete="off" placeholder="Game description" rows="5" cols= "50" onChange={e=> HandleGame(e)}/>
+                
+                    <textarea className={s.description} name="description" autoComplete="off" placeholder="Game description" rows="5" cols= "50" onChange={e=> HandleGame(e)}/>
                     <p>{errorsValue.description}</p>
-                </div>
+        <div className={s.container3}>
+             <div className={s.container2}>   
                 <div>
-                    <label>Release Date: </label>
+                    <label className={s.textdate}>Release Date: </label>
                     <br/>
-                    <input name="releaseDate" type="date" onChange={e => HandleGame(e)}/>
+                    <input className={s.date} name="releaseDate" type="date" onChange={e => HandleGame(e)}/>
                 </div>
                 <br/>
                 <div>
-                    <select name="rating" onChange={e => HandleGame(e)}>
+                    <select className={s.rating} name="rating" onChange={e => HandleGame(e)}>
                         <option>Rating</option>
                         <option>1</option>
                         <option>2</option>
@@ -87,41 +89,8 @@ export default function CreateVideogames () {
                     </select>
                 </div>
                 <br/>              
-                
                 <div>
-                    <label>Platforms: </label>
-                    <div>
-                        <label>Android</label>
-                        <input name="platforms" type="checkbox" value="Android"  onChange= {e => HandlePlatforms(e)}/>
-                    </div>
-                    <div>
-                        <label>iOS</label>
-                        <input name="platforms" type="checkbox" value="iOS"  onChange= {e => HandlePlatforms(e)}/>
-                    </div>
-                    <div>
-                        <label>PC</label>
-                        <input name="platforms" type="checkbox" value="PC" onChange= {e => HandlePlatforms(e)}/>
-                    </div>
-                    <div>
-                        <label>PlayStation 4</label>
-                        <input name="platforms" type="checkbox" value="PlayStation 4" onChange= {e => HandlePlatforms(e)}/>
-                    </div>
-                    <div>
-                        <label>PlayStation 5</label>
-                        <input name="platforms" type="checkbox" value="PlayStation 5" onChange= {e => HandlePlatforms(e)}/>
-                    </div>
-                    <div>
-                        <label>XBOX</label>
-                        <input name="platforms" type="checkbox" value="XBOX"  onChange= {e => HandlePlatforms(e)}/>
-                    </div>
-                    <div>
-                        <label>PS Vita</label>
-                        <input name="platforms" type="checkbox" value="PS Vita" onChange= {e => HandlePlatforms(e)}/>
-                    </div>
-                </div>
-                <br/>
-                <div>
-                    <select onChange={(e) => {
+                    <select className={s.genres} onChange={(e) => {
                         e.preventDefault(e)
                         HandleGenres(e)
                     }}>
@@ -138,20 +107,55 @@ export default function CreateVideogames () {
                 </div>
                 <div>
                     {newGame.genres.map(e => 
-                    <span key={e}>
+                    <span className={s.spn} key={e}>
                     <span>{e} </span>
-                    <button onClick={()=> handleDelete(e)}>x</button>
+                    <button className={s.btn} onClick={()=> handleDelete(e)}>x</button>
                     </span>
                     )}
                 </div>
+             </div>
+                <br/>
+                <div className={s.container4}>
+                    <label className={s.textp}>Platforms: </label>
+                    <div>
+                        <label className={s.labelplat}>Android</label>
+                        <input className={s.iplat} name="platforms" type="checkbox" value="Android"  onChange= {e => HandlePlatforms(e)}/>
+                    </div>
+                    <div>
+                        <label  className={s.labelplat}>iOS</label>
+                        <input name="platforms" type="checkbox" value="iOS"  onChange= {e => HandlePlatforms(e)}/>
+                    </div>
+                    <div>
+                        <label  className={s.labelplat}>PC</label>
+                        <input name="platforms" type="checkbox" value="PC" onChange= {e => HandlePlatforms(e)}/>
+                    </div>
+                    <div>
+                        <label  className={s.labelplat}>PlayStation 4</label>
+                        <input name="platforms" type="checkbox" value="PlayStation 4" onChange= {e => HandlePlatforms(e)}/>
+                    </div>
+                    <div>
+                        <label  className={s.labelplat}>PlayStation 5</label>
+                        <input name="platforms" type="checkbox" value="PlayStation 5" onChange= {e => HandlePlatforms(e)}/>
+                    </div>
+                    <div>
+                        <label  className={s.labelplat}>XBOX</label>
+                        <input name="platforms" type="checkbox" value="XBOX"  onChange= {e => HandlePlatforms(e)}/>
+                    </div>
+                    <div>
+                        <label  className={s.labelplat}>PS Vita</label>
+                        <input name="platforms" type="checkbox" value="PS Vita" onChange= {e => HandlePlatforms(e)}/>
+                    </div>
+                </div>
+                <br/>
+            </div> 
                 <div>
-                <button type="submit">Create Game</button>
+                <button className={s.btn} type="submit">Create Game</button>
                     {console.log(newGame)}
                 </div>
             </form>
         </div>
         <Link to={"/videogames"} >
-        <button className="mainPageButton">Go to Main Page</button>
+        <button >Go to Main Page</button>
         </Link>
         </>
     )   

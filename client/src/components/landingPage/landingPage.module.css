@@ -14,17 +14,16 @@ body {
 .title {
     /* width: 100%;
     height: 100%; */
-    background-color: rgba(153, 153, 153, 0.123);
+    background-color: rgba(100, 175, 152, 0);
+    backdrop-filter: blur(30px);
     font-size: 75px;
-    color: #f0f0f0fa;
-    /* mix-blend-mode:difference; */
+    color: rgb(253, 253, 253);
+    text-shadow: 0 0 0.5px rgba(255,255,255,1) , 0 0 0.5px rgba(255,255,255,1) , 0 0 0.5px rgba(255,255,255,1) , 0 0 2px #00ffff , 0 0 5px #00ffff , 0 0 6px #00ffff , 0 0 7px #00ffff ;
+    mix-blend-mode:luminosity;
     text-align:center; 
     font-family:"Press Start 2p";
     padding: 20px 30px;
-    border: 3px solid
-    #8672ce;
-    border-radius: 10px;
-    
+    border-radius: 30px;
 }
 
 .enter{

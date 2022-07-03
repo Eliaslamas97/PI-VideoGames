@@ -98,7 +98,6 @@ router.post("/create", async function (req, res,next) {
       releaseDate,
       rating,
       platforms,
-      background_image,
       genres,
     } = req.body;
     try{
@@ -107,7 +106,7 @@ router.post("/create", async function (req, res,next) {
       description,
       releaseDate,
       rating,
-      background_image,
+      backgroundImage:'https://shortest.link/EL7',
       platforms,
       genres,
     });

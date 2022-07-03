@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
 .cards{
     margin-top: 50px;
     display: grid;
@@ -14,12 +14,13 @@
     display: inline-block;
     color: rgb(253, 253, 253);
     text-decoration: none;
-    border: 2px solid #f6f6f8;
+    border: 1px solid #f6f6f89c;
     padding: 5px 10px 5px 10px;
-    background-color: rgba(100, 175, 152, 0.068);
-    border-radius: 5px;
+    background-color: rgba(100, 175, 152, 0);
+    backdrop-filter: blur(50px);
+    border-radius: 10px;
     font-size: 15px;
-    font-family: "videogamefont";
+    font-family: "quantico";    
 }
 
 .paginado{
@@ -27,7 +28,7 @@
     justify-self: center;
     justify-items: center;
     justify-content: center;
-    margin-top: 60px;
+    margin-top: 0px;
     padding-bottom: -40px;
  }
 
