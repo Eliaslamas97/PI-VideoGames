@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SearchBar from '../searchBar/searchBar';
+import SearchBar from '../searchBar/SearchBar';
 import s from './navBar.module.css'
 import { useDispatch } from "react-redux";
 import { getVideoGames } from "../../redux/actions/actions";
 
 
-const navBar = () => {
+const NavBar = () => {
   const dispatch = useDispatch();
   return (
     <nav className={s.nav}>
@@ -18,4 +18,4 @@ const navBar = () => {
   )
 }
 
-export default navBar
+export default NavBar

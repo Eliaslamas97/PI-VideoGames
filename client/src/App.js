@@ -1,24 +1,24 @@
 import './App.css';
 import React from "react"
 import {Route} from "react-router-dom";
-import landingPage from "./components/landingPage/landingPage";
-import navBar from "./components/navBar/navBar";
-import videogameDetail from "./components/videogameDetails/videogameDetail";
-import createVideogames from "./components/createVideogames/createVideogames";
-import home from "./components/home/home";
-import filters from './components/filter/filter';
+import LandingPage from "./components/landingPage/LandingPage";
+import NavBar from "./components/navBar/NavBar";
+import VideogameDetail from "./components/videogameDetails/VideogameDetail";
+import CreateVideogames from "./components/createVideogames/CreateVideogames";
+import Home from "./components/home/Home";
+import Filters from './components/filter/Filter';
 
 const App = () => {
   return (
 
     <>
-    <Route path="/videogames" component={navBar} />
-    <Route path="/videogame" component={navBar} />
-    <Route exact path="/videogames" component={filters}/>
-    <Route exact path="/videogames" component={home}/>
-    <Route exact path="/videogame/:id" component={videogameDetail} />
-    <Route exact path="/videogames/create" component={createVideogames} />
-    <Route exact path="/" component={landingPage} />
+    <Route path="/videogames" component={NavBar} />
+    <Route path="/videogame" component={NavBar} />
+    <Route exact path="/videogames" component={Filters}/>
+    <Route exact path="/videogames" component={Home}/>
+    <Route exact path="/videogame/:id" component={VideogameDetail} />
+    <Route exact path="/videogames/create" component={CreateVideogames} />
+    <Route exact path="/" component={LandingPage} />
   </>
   )
 }
