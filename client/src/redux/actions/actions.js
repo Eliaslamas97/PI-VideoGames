@@ -4,7 +4,7 @@ import axios from 'axios';
 // ------------ACTIONS---CREATORS--------------//
 export function getVideoGames() {
     return function(dispatch) {
-        return axios.get ('http://localhost:3002/videogames')
+        return axios.get ('/videogames')
         .then((response) => {
             dispatch({ 
                 type: 'GET_VIDEOGAMES',
@@ -16,7 +16,7 @@ export function getVideoGames() {
 //............SEARCH NAME FUNCTION..............
 export function searchByName(name) {
     return  function (dispatch) {
-       return axios.get(`http://localhost:3002/videogames?name=${name}`)
+       return axios.get(`/videogames?name=${name}`)
        .then((response) => {
          dispatch({
              type:'SEARCH_BY_NAME', 
@@ -27,7 +27,7 @@ export function searchByName(name) {
 //...............DETAIL GAME....................
 export function getVideogameDetail(id){
     return function (dispatch) {
-        return axios.get(`http://localhost:3002/videogame/${id}`)
+        return axios.get(`/videogame/${id}`)
         .then((response) => {
             dispatch({
                 type:'GET_VIDEOGAME_DETAIL',
@@ -40,7 +40,7 @@ export function getVideogameDetail(id){
 export function postGame(payload){
     return dispatch => {
         try {
-                axios.post(`http://localhost:3002/videogames/create`, payload)
+                axios.post(`/videogames/create`, payload)
                 .then((res) => {
                     dispatch({
                         type: POST_GAME,
@@ -55,7 +55,7 @@ export function postGame(payload){
 //.................... GET GENRES.................
 export function getGenres() {
     return function(dispatch) {
-        return axios.get ('http://localhost:3002/genres')
+        return axios.get ('/genres')
         .then((response) => {
             dispatch({ 
                 type: GET_GENRES,

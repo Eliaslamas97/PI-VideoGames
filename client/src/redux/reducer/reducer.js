@@ -27,7 +27,7 @@ import {
         return {
           ...state,
           videogames: action.payload,
-          videogamesToShow: action.payload,        
+          filteredVideogames: []        
         };
       
       case GET_GENRES:
@@ -37,12 +37,18 @@ import {
         };
 
       case SEARCH_BY_NAME:
-        return {
-          ...state,
-          videogames: action.payload,
-          videogamesToShow: action.payload,
+        if(action.payload.length === 0) {
+          return {
+            ...state,
+            error: "Videogame Not Found"
+          }
+        }else{
+              return {
+                  ...state,
+                  videogames: action.payload,
+                  filteredVideogames: []
+              };
         };
-
       case GET_VIDEOGAME_DETAIL:
         console.log(action.payload)
         return {

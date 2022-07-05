@@ -58,7 +58,7 @@ router.get('/', async(req, res) => {
             page ++;
             let nextPage = await axios.get(current.next)
             apiInfo = apiInfo.concat(nextPage.data.results);
-            current = nextPage.data
+            current = nextPage.data 
         }
 
 
