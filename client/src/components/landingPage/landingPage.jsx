@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import s from "./landingPage.module.css"
 
-const Landingpage = () => {
+export default function LandingPage () {
     return (
         <div >
                 <h1 className={s.title}>Videogames</h1>
@@ -13,4 +13,3 @@ const Landingpage = () => {
     )
 }
 
-export default Landingpage;

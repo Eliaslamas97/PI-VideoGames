@@ -8,9 +8,8 @@ import CreateVideogames from "./components/createVideogames/CreateVideogames";
 import Home from "./components/home/Home";
 import Filters from './components/filter/Filter';
 
-const App = () => {
+export default function App () {
   return (
-
     <>
     <Route path="/videogames" component={NavBar} />
     <Route path="/videogame" component={NavBar} />
@@ -22,5 +21,3 @@ const App = () => {
   </>
   )
 }
-
-export default App
