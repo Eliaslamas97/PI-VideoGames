@@ -31,7 +31,7 @@ module.exports = (sequelize) => {
       type: DataTypes.BOOLEAN,
       defaultValue: true,
     },
-    backgroundImage: {
+    background_image: {
       type: DataTypes.STRING,
     },
   }, {

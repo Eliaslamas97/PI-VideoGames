@@ -16,6 +16,9 @@ router.get('/:idVideogame', async(req, res) => {
             },
             include: Genres,
         });
+        gameById = JSON.stringify(gameById);
+        gameById = JSON.parse(gameById);
+        gameById.genres = gameById.genres.map(g => g.name)
          return res.send(gameById)
     }
         let gameApi = await axios.get(`https://api.rawg.io/api/games/${idVideogame}?key=${YOUR_API_KEY}`)

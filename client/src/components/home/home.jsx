@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getVideoGames } from "../../redux/actions/actions";
 import s from "./home.module.css";
 import  image  from "../../images/lafoto.jpg"
+import Loading from "../loading/loading";
 
 export default function Home(card) {
  const dispatch = useDispatch();
@@ -11,6 +12,7 @@ export default function Home(card) {
  const filtrados = useSelector(state => state.filteredVideogames)
  const [pageItems, setPageItems] = useState(0);
  const [currentPage, setCurrentPage] = useState(1);
+ const [loading, setLoading] = useState(true)
 
  useEffect(() => {
     dispatch(getVideoGames())
@@ -45,29 +47,26 @@ export default function Home(card) {
  return (
     <div >
             <div className={s.background}> 
-                <img src={image} className={s.stretch} alt="" />
+            <img src={image} className={s.stretch} alt="" />
             </div>
             <br/>
             <br/>
-            {/* <div className={s.paginado}>
-                <button className={s.button} onClick={PrevHandler}>Prev</button>
-                <span className={s.span}> {currentPage} </span>
-                <button className={s.button} onClick={NextHandler}>Next</button>
-            </div> */}
-        <div  className={s.cards}>
-        {filterVideogames()?.map((x) => {
-            return (
-                <VideogameCard
-                key= {x.id}
-                id= {x.id}
-                name={x.name}
-                background_image={x.background_image}
-                genres= {x.genres}
-                rating= {x.rating}
-                />
-            )
-        })}
-        </div>
+            {loading === true? <Loading setLoading = {setLoading}/> : 
+            <div className={s.cards}>
+            {filterVideogames()?.map((x) => {
+                return (
+                 <VideogameCard
+                    key= {x.id}
+                    id= {x.id}
+                    name={x.name}
+                    background_image={x.background_image}
+                    genres= {x.genres}
+                    rating= {x.rating}
+                    />
+                )
+            })}
+            </div>
+            }
         <div className={s.paginado}>
                 <button className={s.button} onClick={PrevHandler}>Prev</button>
                 <span className={s.span}> {currentPage} </span>

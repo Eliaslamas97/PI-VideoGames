@@ -155,7 +155,7 @@ export default function CreateVideogames () {
             </form>
         </div>
         <Link to={"/videogames"} >
-        <button >Go to Main Page</button>
+        <button className={s.btnback} >Back to Home</button>
         </Link>
         </>
     )   

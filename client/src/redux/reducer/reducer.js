@@ -44,6 +44,7 @@ import {
         };
 
       case GET_VIDEOGAME_DETAIL:
+        console.log(action.payload)
         return {
           ...state,
           videogameDetail: action.payload,

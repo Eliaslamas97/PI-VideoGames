@@ -1,0 +1,12 @@
+.img {
+    border-radius: 100px;
+    width: 400px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}

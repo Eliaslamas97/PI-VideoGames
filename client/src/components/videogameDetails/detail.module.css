@@ -113,3 +113,20 @@
     backdrop-filter: blur(50px);
     padding: 1px;
 }
+
+.btn{
+    position:relative;
+    background-color: rgba(100, 175, 152, 0.308);
+    border: 1px solid rgba(12, 12, 12, 0);   
+    border-radius: 5px;
+    padding: 8px;
+    padding-inline: 10px;
+    margin-left:6px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: "Press Start 2p"
+}
+
+.btn:hover{
+    text-shadow: 0 0 1px rgba(255,255,255,1) , 0 0 2px rgba(255,255,255,1) , 0 0 3px rgba(255,255,255,1) , 0 0 4px #00ffff , 0 0 7px #00ffff , 0 0 8px #00ffff , 0 0 10px #00ffff ;
+}

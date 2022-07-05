@@ -21,7 +21,7 @@ export default function VideogameDetail() {
                           <img className={s.img} src={Videogame.background_image} width="450" height="280" alt=""/>
                           <div> 
                           <div className={s.name}><p>Name:</p><p>{Videogame.name}</p></div>
-                          <div className={s.genres}><p>Genres:</p><p>{Videogame.genres}</p></div>
+                          <div className={s.genres}><p>Genres:</p><p>{Videogame.genres?.map(genres => genres).join(', ')}</p></div>
                           <div className={s.platforms}><p>Platforms:</p><p>{Videogame.platforms?.map(plat => plat).join(', ')}</p></div>
                           <div className={s.date}><p>Release Date:</p><p>{Videogame.releaseDate}</p></div>
                           <div className={s.rating}><p>Rating:</p><p>{Videogame.rating}</p></div> 
@@ -29,10 +29,10 @@ export default function VideogameDetail() {
                           </div>          
                  </div>
                         <p className={s.description}>Description:</p>
-                          <div className={s.description} dangerouslySetInnerHTML={{ __html: Videogame.description}}></div>
+                        <div className={s.description} dangerouslySetInnerHTML={{ __html: Videogame.description}}></div>
               <div>                    
                            <Link to='/videogames'>
-                       <button>Back</button>
+                       <button className={s.btn}>Back</button>
                            </Link>
         
                   </div>

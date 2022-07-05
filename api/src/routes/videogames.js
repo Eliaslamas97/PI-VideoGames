@@ -106,13 +106,15 @@ router.post("/create", async function (req, res,next) {
       description,
       releaseDate,
       rating,
-      backgroundImage:'https://shortest.link/EL7',
+      background_image:'https://shortest.link/EL7',
       platforms,
-      genres,
     });
-  
+    const generos = await Genres.findAll({
+        where: { name: genres },
+    });
+    videogame.addGenres(generos);
+
     // await videogame.addGenres(genres);
-    // await videogame.addPlatforms(platforms)
     res.status(201).send("Game successfully created");
     }
     catch(e){next(e)}
