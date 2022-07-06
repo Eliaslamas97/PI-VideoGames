@@ -1,12 +1,12 @@
 // import './App.css';
 import React from "react"
 import {Route} from "react-router-dom";
-import LandingPage from "./components/landingPage/LandingPage";
-import NavBar from "./components/navBar/NavBar";
-import VideogameDetail from "./components/videogameDetails/VideogameDetail";
-import CreateVideogames from "./components/createVideogames/CreateVideogames";
-import Home from "./components/home/Home";
-import Filters from './components/filter/Filter';
+import LandingPage from "./components/landingPage/landingPage.jsx";
+import NavBar from "./components/navBar/NavBar.jsx";
+import VideogameDetail from "./components/videogameDetails/VideogameDetail.jsx";
+import CreateVideogames from "./components/createVideogames/CreateVideogames.jsx";
+import Home from "./components/home/Home.jsx";
+import Filters from './components/filter/Filter.jsx';
 
 export default function App () {
   return (
