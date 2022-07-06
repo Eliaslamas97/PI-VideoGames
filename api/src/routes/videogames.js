@@ -120,6 +120,24 @@ router.post("/create", async function (req, res,next) {
     catch(e){next(e)}
   });
 
+//   router.delete('/', async function(req, res) {
+//     try{
+//         const {name} = req.query;
+//         if(!name) {
+//             const game = await Videogames.findAll();
+//             return res.status(200).send(game);
+//         }
+//         if(!Videogames) {
+//            return res.status(200).send("No se encontraron Videojuegos")
+//         }else {
+//             const games = await Videogames.destroy({where:{name: [name]}})
+//             return res.status(200).send("Videogames Deleted")
+//         }
+//     } catch(e){
+//         console.log(e);
+//     }
+//   })
+
 
 router.get("/myGames", async function(req, res){
     const myGames = await Videogames.findAll();
