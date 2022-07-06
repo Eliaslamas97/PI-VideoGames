@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SearchBar from '../searchBar/SearchBar';
+import SearchBar from '../searchBar/searchBar';
 import s from './navBar.module.css'
 import { useDispatch } from "react-redux";
 import { getVideoGames } from "../../redux/actions/actions";

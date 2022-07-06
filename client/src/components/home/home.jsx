@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import VideogameCard from "../videogameCard/VideogameCard";
+import VideogameCard from "../videogameCard/videogameCard";
 import { useDispatch, useSelector } from "react-redux";
 import { getVideoGames } from "../../redux/actions/actions";
 import s from "./home.module.css";
 import  image  from "../../images/lafoto.jpg"
-import Loading from "../loading/Loading";
+import Loading from "../loading/loading";
 
 export default function Home(card) {
  const dispatch = useDispatch();
