@@ -18,6 +18,7 @@ export default function Home(card) {
     dispatch(getVideoGames())
  }, [dispatch]);
 
+
  const filterVideogames = () => {
     if(filtrados.length > 0) {
         if(currentPage === 1){

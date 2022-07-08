@@ -27,6 +27,7 @@ export default function CreateVideogames () {
             alert("Game created")
             document.formAct.reset();
         }
+        // window.location.reload()
     }
 
     function validateValue({name, description, rating}) {
@@ -44,7 +45,11 @@ export default function CreateVideogames () {
         setNewGame({...newGame,[e.target.name]:e.target.value})
       }
     function HandleGenres(e){
+        if(newGame.genres.includes(e.target.value)) {
+            setNewGame({...newGame, genres:[...newGame.genres]})
+        } else {
         setNewGame({...newGame, genres:[...newGame.genres,e.target.value]})
+        }
       }
     function HandlePlatforms(e){
         setNewGame({
@@ -66,8 +71,7 @@ export default function CreateVideogames () {
             <form name="formAct" onSubmit={e => handleSubmit(e)}>
                 <h1 className={s.title}>Create Game</h1>
                 <input className={s.input} name="name" autoComplete="off" placeholder="Game name..." onChange={e => HandleGame(e)}/>
-                <p>{errorsValue.name}</p>
-                
+                <p>{errorsValue.name}</p>                
                     <textarea className={s.description} name="description" autoComplete="off" placeholder="Game description" rows="5" cols= "50" onChange={e=> HandleGame(e)}/>
                     <p>{errorsValue.description}</p>
         <div className={s.container3}>
@@ -156,6 +160,9 @@ export default function CreateVideogames () {
         </div>
         <Link to={"/videogames"} >
         <button className={s.btnback} >Back to Home</button>
+        </Link>
+        <Link to={"/videogames/create/mygames"}>
+            <button className={s.btnback}>Delete</button>
         </Link>
         </>
     )   

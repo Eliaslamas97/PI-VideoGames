@@ -16,8 +16,8 @@ router.get('/:idVideogame', async(req, res) => {
             },
             include: Genres,
         });
-        gameById = JSON.stringify(gameById);
-        gameById = JSON.parse(gameById);
+        gameById = JSON.stringify(gameById); //JSON. stringify() convierte un objeto o valor de JavaScript en una cadena de texto JSON
+        gameById = JSON.parse(gameById); //JSON. parse() analiza una cadena de texto como JSON
         gameById.genres = gameById.genres.map(g => g.name)
          return res.send(gameById)
     }

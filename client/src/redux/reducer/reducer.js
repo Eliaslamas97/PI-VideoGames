@@ -10,15 +10,19 @@ import {
     SORT_RATING,
     DB,
     API,
-    ALL
+    ALL,
+    DELETE_VIDEOGAME,
+    GET_MYGAMES,
+    FILTER_RELEASEDATE
   } from "../actions/actions";
   
   const initialState = {
     videogames: [],
     videogameDetail: [],
-    videogamesToShow: [],
     genres: [],
     filteredVideogames: [],
+    myGames: [],
+    error: ""
   };
   
   function rootReducer(state = initialState, action, payload) {
@@ -46,15 +50,28 @@ import {
               return {
                   ...state,
                   videogames: action.payload,
+                  error: "",
                   filteredVideogames: []
               };
         };
       case GET_VIDEOGAME_DETAIL:
-        console.log(action.payload)
         return {
           ...state,
           videogameDetail: action.payload,
         };
+
+      case GET_MYGAMES:
+        console.log(action.payload, "hola")
+        return{
+          ...state,
+          myGames: action.payload,
+        }
+
+      case DELETE_VIDEOGAME:
+        return{
+          ...state,
+          myGames: state.myGames.filter(a => a.name !== action.payload)
+        }
 
       case SORT_ALPHABET:
         let orderedAlphabet
@@ -87,6 +104,35 @@ import {
         return {
           ...state,
           filteredVideogames: orderedAlphabet,  
+        }
+
+      case FILTER_RELEASEDATE:
+        let orderedReleaseDate
+        if(state.filteredVideogames.length > 0) {
+          orderedReleaseDate = [...state.filteredVideogames]
+        }else {
+          orderedReleaseDate = [...state.videogames]
+        }
+        if(action.payload === "descendant") {
+          orderedReleaseDate = orderedReleaseDate.sort((a, b) => {
+            if(a.releasedate < b.releasedate) {
+              return -1;
+            }
+            if(a.releasedate > b.releasedate) {
+              return 1;
+            }
+            return 0
+          })
+        }else if(action.payload === "ascendant") {
+          orderedReleaseDate = orderedReleaseDate.sort((a, b) => {
+            if(a.releasedate < b.releasedate) {
+              return 1;
+            }
+            if(a.releasedate > b.releasedate) {
+              return -1;
+            }
+            return 0;
+          })
         }
       
       case SORT_RATING:

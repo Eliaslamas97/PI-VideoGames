@@ -20,7 +20,7 @@ export default function VideogameDetail() {
                   <div className={s.container}> 
                           <img className={s.img} src={Videogame.background_image} width="450" height="280" alt=""/>
                           <div> 
-                          <div className={s.name}><p>Name:</p><p>{Videogame.name}</p></div>
+                          <div className={s.name}><p></p><p>{Videogame.name}</p></div>
                           <div className={s.genres}><p>Genres:</p><p>{Videogame.genres?.map(genres => genres).join(', ')}</p></div>
                           <div className={s.platforms}><p>Platforms:</p><p>{Videogame.platforms?.map(plat => plat).join(', ')}</p></div>
                           <div className={s.date}><p>Release Date:</p><p>{Videogame.releaseDate}</p></div>

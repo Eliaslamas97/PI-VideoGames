@@ -7,6 +7,7 @@ import VideogameDetail from "./components/videogameDetails/videogameDetail.jsx";
 import CreateVideogames from "./components/createVideogames/createVideogames.jsx";
 import Home from "./components/home/home.jsx";
 import Filters from './components/filter/filter.jsx';
+import MyGames from "./components/delete/delete.jsx";
 
 export default function App () {
   return (
@@ -17,6 +18,7 @@ export default function App () {
     <Route exact path="/videogames" component={Home}/>
     <Route exact path="/videogame/:id" component={VideogameDetail} />
     <Route exact path="/videogames/create" component={CreateVideogames} />
+    <Route exact path="/videogames/create/mygames" component={MyGames} />
     <Route exact path="/" component={LandingPage} />
   </>
   )

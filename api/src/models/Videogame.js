@@ -1,6 +1,7 @@
 const { DataTypes } = require('sequelize');
 // Exportamos una funcion que define el modelo
 // Luego le injectamos la conexion a sequelize.
+//la ID que sea de tipo UUID para generar un numero random con letras y numeros y no se pisen o sobreescriba 
 module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define('videogames', {

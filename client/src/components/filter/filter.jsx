@@ -1,6 +1,6 @@
 import React, { useEffect } from "react" 
 import { useDispatch, useSelector } from "react-redux"
-import { sortAlphabet, sortRating, filterGenres, getGenres, DB, API, ALL, filterOrigin } from "../../redux/actions/actions"
+import { sortAlphabet, sortRating, filterGenres, getGenres, DB, API, ALL, filterOrigin, filterReleaseDate} from "../../redux/actions/actions"
 import s from "./filter.module.css"
 
 
@@ -40,6 +40,12 @@ export default function Filters () {
         }
     }
 
+    function onSelectFilterReleaseDate(e) {
+        if(e.target.name === 'releaseDate' && e.target.value !== 'ReleaseDate') {
+            dispatch(filterReleaseDate(e.target.value))
+        }
+    }
+
     return (
         <div className={s.filterContainer}>
             <div className={s.containerForms}>
@@ -72,6 +78,11 @@ export default function Filters () {
                                 )
                             })
                         }
+                    </select>
+                    <select name="releaseDate" onChange={onSelectFilterReleaseDate}>
+                        <option value={ASCENDANT}>ascendant</option>    
+                        <option value={DESCENDANT}>descendant</option>
+
                     </select>
                 </div>
             </div>

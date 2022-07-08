@@ -22,7 +22,9 @@ export function searchByName(name) {
              type:'SEARCH_BY_NAME', 
              payload: response.data,
          })
-    })}
+    })
+        
+}
 } 
 //...............DETAIL GAME....................
 export function getVideogameDetail(id){
@@ -33,7 +35,7 @@ export function getVideogameDetail(id){
                 type:'GET_VIDEOGAME_DETAIL',
                 payload: response.data,
             })
-        })      
+        })
     };
 }
 //.................... POST CREATE GAME.................
@@ -64,6 +66,34 @@ export function getGenres() {
         })
     }
 }
+
+export const deleteVideogame = (name) => async dispatch => {
+    const res= await axios.delete(`/videogames?name=${name}`)
+    dispatch({
+      type:DELETE_VIDEOGAME,
+      payload:res.data,
+    })
+  }
+
+export function getMyGames() {
+    return function(dispatch){
+        return axios.get('/videogames/myGames')
+        .then((myGames) => {
+            dispatch(setMyGames(myGames.data))
+        })
+        .catch((e)=> {
+            console.log(e);
+        })
+    }
+}
+
+function setMyGames(payload) {
+    return {
+        type: GET_MYGAMES,
+        payload,
+    }
+}
+
 
 export function filterGenres(type) {
     return {
@@ -102,6 +132,14 @@ export function filterOrigin(value) {
     }
 }
 
+export function filterReleaseDate(type) {
+    return {
+        type: FILTER_RELEASEDATE,
+        payload:type
+    }
+}
+
+
 
 //........Create Game...............
 export const GET_VIDEOGAMES = 'GET_VIDEOGAMES';
@@ -111,6 +149,9 @@ export const GET_GENRES = "GET_GENRES"
 export const SEARCH_BY_NAME = 'SEARCH_BY_NAME';
 //-------DETAIL GAME---------------
 export const GET_VIDEOGAME_DETAIL = 'GET_VIDEOGAME_DETAIL';
+//-------DELETE------------------
+export const DELETE_VIDEOGAME = 'DELETE_VIDEOGAME';
+export const GET_MYGAMES = 'GET_MYGAMES'
 //-------FILTERS-------------------
 export const FILTER_GENRES = 'FILTER_GENRES';
 export const SORT_ALPHABET = 'SORT_ALPHABET';
@@ -118,3 +159,4 @@ export const SORT_RATING = 'SORT_RATING';
 export const DB = "DB";
 export const ALL = "ALL";
 export const API = "API";
+export const FILTER_RELEASEDATE = "FILTER_RELEASEDATE"
